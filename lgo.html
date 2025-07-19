@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IntelHire Splash Screen</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #splash-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      max-width: 300px;
+      animation:
+        fadeIn 1.5s ease-in-out,
+        moveToTopLeft 2s ease-in-out 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    @keyframes moveToTopLeft {
+      0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      100% {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0) scale(0.35);
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="E:\internship\IntelHire\IntelHire-image (3).png" alt="IntelHire Logo" id="splash-logo">
+</body>
+</html>
