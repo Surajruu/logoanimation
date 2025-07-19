@@ -13,16 +13,15 @@
       position: relative;
     }
 
-    #splash-logo {
+    img.logo {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(1);
       max-width: 300px;
-      animation:
-        fadeIn 1.5s ease-in-out,
-        moveToTopLeft 2s ease-in-out 2s forwards,
-        moveBackToCenter 3s ease-in-out 5s forwards;
+      animation: 
+        fadeIn 1.5s ease-in-out, 
+        moveToTopLeft 2s ease-in-out 2s forwards;
     }
 
     @keyframes fadeIn {
@@ -43,28 +42,14 @@
         transform: translate(-50%, -50%) scale(1);
       }
       100% {
-        top: 0;
-        left: 0;
+        top: 20px;
+        left: 20px;
         transform: translate(0, 0) scale(0.35);
-      }
-    }
-
-    @keyframes moveBackToCenter {
-      0% {
-        top: 0;
-        left: 0;
-        transform: translate(0, 0) scale(0.35);
-      }
-      100% {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1);
       }
     }
   </style>
 </head>
 <body>
-  <img src="intelhire-logo.png" id="splash-logo" alt="IntelHire Logo" />
+  <img src="E:\internship\IntelHire\intelhire-logo.png" alt="IntelHire Logo" class="logo" />
 </body>
 </html>
-
