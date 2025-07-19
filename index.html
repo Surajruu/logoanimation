@@ -3,39 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IntelHire Splash Screen</title>
+  <title>IntelHire Splash Animation</title>
   <style>
     body {
       margin: 0;
-      height: 100vh;
       background-color: #000;
+      height: 100vh;
       overflow: hidden;
       position: relative;
     }
 
-    img.logo {
+    #splash-logo {
       position: absolute;
       top: 50%;
       left: 50%;
+      width: 300px; /* ✅ control logo size */
+      max-width: 80%;
       transform: translate(-50%, -50%) scale(1);
-      max-width: 300px;
-      animation: 
-        fadeIn 1.5s ease-in-out, 
-        moveToTopLeft 2s ease-in-out 2s forwards;
+      animation:
+        fadeIn 1s ease-in-out,
+        moveToCorner 2.5s ease-in-out 1.5s forwards;
     }
 
     @keyframes fadeIn {
-      0% {
+      from {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0.95);
+        transform: translate(-50%, -50%) scale(0.9);
       }
-      100% {
+      to {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
       }
     }
 
-    @keyframes moveToTopLeft {
+    @keyframes moveToCorner {
       0% {
         top: 50%;
         left: 50%;
@@ -44,12 +45,12 @@
       100% {
         top: 20px;
         left: 20px;
-        transform: translate(0, 0) scale(0.35);
+        transform: translate(0, 0) scale(0.25);
       }
     }
   </style>
 </head>
 <body>
-  <img src="E:\internship\IntelHire\intelhire-logo.png" alt="IntelHire Logo" class="logo" />
+  <img src="intelhire-logo.png" alt="IntelHire Logo" id="splash-logo" />
 </body>
 </html>
