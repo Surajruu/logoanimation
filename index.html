@@ -21,7 +21,8 @@
       max-width: 300px;
       animation:
         fadeIn 1.5s ease-in-out,
-        moveToTopLeft 2s ease-in-out 2s forwards;
+        moveToTopLeft 2s ease-in-out 2s forwards,
+        moveBackToCenter 3s ease-in-out 5s forwards;
     }
 
     @keyframes fadeIn {
@@ -47,9 +48,23 @@
         transform: translate(0, 0) scale(0.35);
       }
     }
+
+    @keyframes moveBackToCenter {
+      0% {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0) scale(0.35);
+      }
+      100% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
   </style>
 </head>
 <body>
-  <img src="intelhire-logo.png" alt="IntelHire Logo" class="logo" />
+  <img src="intelhire-logo.png" id="splash-logo" alt="IntelHire Logo" />
 </body>
 </html>
+
